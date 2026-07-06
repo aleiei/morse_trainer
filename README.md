@@ -30,6 +30,34 @@ The whole project is designed around component reuse, with the goal of building 
 - EEPROM
 	- Arduino core library used to store persistent settings (key type, speed mode, WPM).
 
+## Development environment
+
+This project was written in Visual Studio Code and built with PlatformIO.
+
+- Primary workflow
+	- Editor: Visual Studio Code
+	- Build/upload: PlatformIO
+	- Main source file: `src/morse_trainer.cpp`
+
+## Using Arduino IDE
+
+The project can also be used with Arduino IDE.
+
+- Required changes
+	- Create an Arduino sketch folder named `morse_trainer`.
+	- Copy `src/morse_trainer.cpp` into that folder.
+	- Rename the copied file to `morse_trainer.ino`.
+
+- Arduino IDE setup
+	- Board: Arduino Nano
+	- Processor: ATmega328P (select the correct bootloader for your board)
+	- Port: select your serial port
+	- Install library: U8g2 (Library Manager)
+
+- Notes
+	- `SPI` and `EEPROM` are included in the Arduino core and do not need manual installation.
+	- Pin mapping and project behavior are the same as in the PlatformIO version.
+
 ## Menu and functions
 
 The user interface is controlled by a rotary encoder with push button.
